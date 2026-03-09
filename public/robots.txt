@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://languagetranslationusa.com/sitemap-index.xml

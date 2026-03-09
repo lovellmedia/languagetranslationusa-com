@@ -1,0 +1,28 @@
+---
+interface Props {
+  title?: string;
+  level?: 'h1' | 'h2' | 'h3';
+  id?: string;
+}
+
+const { title, level = 'h2', id } = Astro.props;
+
+const headingClasses = {
+  h1: 'text-4xl font-black text-slate-900 dark:text-slate-100 mb-6',
+  h2: 'text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4 mt-8',
+  h3: 'text-xl font-semibold text-slate-800 dark:text-slate-200 mb-3 mt-6',
+};
+---
+
+<section class="mb-8" id={id}>
+  {title && (
+    <>
+      {level === 'h1' && <h1 class={headingClasses[level]}>{title}</h1>}
+      {level === 'h2' && <h2 class={headingClasses[level]}>{title}</h2>}
+      {level === 'h3' && <h3 class={headingClasses[level]}>{title}</h3>}
+    </>
+  )}
+  <div class="text-slate-600 dark:text-slate-400 leading-relaxed">
+    <slot />
+  </div>
+</section>

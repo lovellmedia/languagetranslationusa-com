@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteTitle = "Language Translation USA - Maryland Translation Services";
+const siteDescription = "Professional certified translation services in Maryland for immigration, legal, medical, and business documents. USCIS-approved translators serving Baltimore and beyond.";
+
+const navLinks = [
+  { name: 'Overview', href: '/immigration-document-translation/' },
+  { name: 'History', href: '/immigration-document-translation/history/' },
+  { name: 'Technical Deep-Dive', href: '/immigration-document-translation/technical-deep-dive/' },
+  { name: 'Ontology', href: '/immigration-document-translation/ontology/' },
+  { name: 'Trends', href: '/immigration-document-translation/trends/' },
+  { name: 'Tools', href: '/immigration-document-translation/tools/' },
+  { name: 'Challenges', href: '/immigration-document-translation/challenges/' },
+];
+
+const pillarCards = [
+  {
+    title: "Overview",
+    description: "Introduction to certified translation for immigration purposes. Understand USCIS requirements and what makes a translation legally valid.",
+    href: "/immigration-document-translation/",
+    icon: "description"
+  },
+  {
+    title: "History & Evolution",
+    description: "The history of immigration translation standards, USCIS policy changes, and Maryland's role as an immigration hub.",
+    href: "/immigration-document-translation/history/",
+    icon: "history"
+  },
+  {
+    title: "Technical Deep-Dive",
+    description: "What makes a translation 'certified'? Learn about translator qualifications, statement of accuracy requirements, and formatting standards.",
+    href: "/immigration-document-translation/technical-deep-dive/",
+    icon: "engineering"
+  },
+  {
+    title: "Ontology & Knowledge Base",
+    description: "Comprehensive glossary of immigration translation terms, document type taxonomy, and certification bodies.",
+    href: "/immigration-document-translation/ontology/",
+    icon: "menu_book"
+  },
+  {
+    title: "Current Trends",
+    description: "Digital certification trends, electronic submission requirements, and remote notarization in Maryland.",
+    href: "/immigration-document-translation/trends/",
+    icon: "trending_up"
+  },
+  {
+    title: "Tools & Resources",
+    description: "Document type identifier, word count estimator, certification requirement checker, and cost calculator.",
+    href: "/immigration-document-translation/tools/",
+    icon: "build"
+  },
+  {
+    title: "Common Challenges",
+    description: "Solutions for rejected translations, handling non-Latin scripts, apostille requirements, and rush translation needs.",
+    href: "/immigration-document-translation/challenges/",
+    icon: "help_outline"
+  }
+];
+---
+
+<BaseLayout title={siteTitle} description={siteDescription}>
+  <style>
+    .hero-gradient {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    .dark .hero-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="flex flex-col gap-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider w-fit">
+            <span class="material-symbols-outlined text-sm">verified</span>
+            USCIS-Approved Certified Translations
+          </div>
+          <h1 class="text-slate-900 dark:text-slate-100 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+            Professional <span class="text-blue-600 dark:text-blue-400">Translation Services</span> in Maryland
+          </h1>
+          <p class="text-slate-600 dark:text-slate-400 text-lg sm:text-xl leading-relaxed max-w-xl">
+            Certified document translation for immigration, legal, medical, and business needs. Serving Baltimore, Montgomery County, and all of Maryland with accuracy guaranteed.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/immigration-document-translation/" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-base font-bold shadow-lg shadow-blue-600/20 hover:shadow-xl transition-all inline-flex items-center gap-2">
+              Explore Services
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+            <a href="/immigration-document-translation/tools/" class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-8 py-4 rounded-lg text-base font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-all inline-flex items-center gap-2">
+              <span class="material-symbols-outlined">build</span>
+              Translation Tools
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-video rounded-xl overflow-hidden shadow-2xl bg-slate-200 dark:bg-slate-800">
+            <div class="w-full h-full bg-gradient-to-br from-blue-500 to-slate-600 flex items-center justify-center">
+              <span class="material-symbols-outlined text-9xl text-white/30">translate</span>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-100 dark:border-slate-700 hidden sm:block">
+            <div class="flex items-center gap-4">
+              <div class="p-3 bg-green-100 dark:bg-green-900 rounded-full text-green-700 dark:text-green-300">
+                <span class="material-symbols-outlined text-3xl">check_circle</span>
+              </div>
+              <div>
+                <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">USCIS Acceptance Rate</p>
+                <p class="text-2xl font-bold text-slate-900 dark:text-white">100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Section -->
+  <section class="py-12 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex flex-col gap-1 border-l-2 border-blue-500/30 pl-6 py-2">
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Documents Translated</p>
+          <p class="text-3xl font-bold text-slate-900 dark:text-white">50,000+</p>
+        </div>
+        <div class="flex flex-col gap-1 border-l-2 border-blue-500/30 pl-6 py-2">
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Languages Supported</p>
+          <p class="text-3xl font-bold text-slate-900 dark:text-white">75+</p>
+        </div>
+        <div class="flex flex-col gap-1 border-l-2 border-blue-500/30 pl-6 py-2">
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Certified Translators</p>
+          <p class="text-3xl font-bold text-slate-900 dark:text-white">120+</p>
+        </div>
+        <div class="flex flex-col gap-1 border-l-2 border-blue-500/30 pl-6 py-2">
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Years of Service</p>
+          <p class="text-3xl font-bold text-slate-900 dark:text-white">15+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Cards Section -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Immigration Document Translation</h2>
+          <p class="text-slate-600 dark:text-slate-400">Comprehensive guides and resources for certified translation services required for USCIS applications and immigration processes in Maryland.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {pillarCards.map((card) => (
+          <a href={card.href} class="group block bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 card-hover transition-all duration-300">
+            <div class="p-8">
+              <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400">
+                <span class="material-symbols-outlined text-2xl">{card.icon}</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {card.title}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                {card.description}
+              </p>
+              <div class="mt-6 flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-bold">
+                Read More
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-slate-900 text-white overflow-hidden relative">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#3b82f6,transparent_70%)]"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl sm:text-4xl font-black mb-6">Need a Certified Translation?</h2>
+      <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
+        Get accurate, USCIS-compliant translations from certified professionals. Fast turnaround, competitive rates, and guaranteed acceptance.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/immigration-document-translation/tools/" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg transition-all inline-flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">calculate</span>
+          Get an Estimate
+        </a>
+        <a href="/immigration-document-translation/" class="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-lg transition-all inline-flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">menu_book</span>
+          Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

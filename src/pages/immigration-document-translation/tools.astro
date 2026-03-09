@@ -1,0 +1,345 @@
+---
+import TopicLayout from '../../layouts/TopicLayout.astro';
+import ContentSection from '../../components/ContentSection.astro';
+
+const title = "Immigration Translation Tools and Resources";
+const description = "Practical tools and resources for immigration document translation including cost estimators, word count calculators, turnaround time planners, and document type guides.";
+
+const keyPoints = [
+  "Online cost estimators help budget for translation services",
+  "Word count calculators determine pricing tier for translation quotes",
+  "Turnaround time calculators help plan application timelines",
+  "Document type guides identify what needs translation for different applications",
+  "USCIS checklists ensure complete documentation submission",
+];
+
+const relatedLinks = [
+  { name: "USCIS Filing Fees", href: "https://www.uscis.gov/forms/explore-my-options" },
+  { name: "ATA Translation Services", href: "https://www.atanet.org/onlinedirectories/" },
+  { name: "Maryland Secretary of State", href: "https://sos.maryland.gov/" },
+  { name: "USCIS Processing Times", href: "https://www.uscis.gov/forms/explore-my-options" },
+];
+---
+
+<TopicLayout 
+  title={title} 
+  description={description}
+  topic="immigration-document-translation"
+  pillar="tools"
+  keyPoints={keyPoints}
+  relatedLinks={relatedLinks}
+  showTools={false}
+>
+  <ContentSection title="Tools and Resources for Immigration Translation" level="h1">
+    <p>
+      Navigating the immigration document translation process requires access to practical tools and reliable resources. From cost estimation to document type identification, specialized tools help applicants plan their translation needs effectively. This comprehensive resource guide provides access to calculators, checklists, reference materials, and external resources that support successful immigration document preparation.
+    </p>
+    <p>
+      The tools and resources presented here complement <a href="/immigration-document-translation/">our overview of certified translation</a> and the detailed information in other pillar pages. Whether you are estimating costs for a budget, determining turnaround times for application planning, or identifying which documents require translation, these resources provide practical assistance for the immigration documentation process.
+    </p>
+  </ContentSection>
+
+  <ContentSection title="Translation Cost Estimator" level="h2">
+    <p>
+      Understanding typical translation costs helps immigration applicants budget appropriately for their documentation needs. While actual quotes vary based on document complexity, language pair, and service provider, the following guidelines provide reasonable estimates for the Maryland market. Use this estimator to plan your translation budget, then request specific quotes from qualified providers.
+    </p>
+    
+    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg my-6 border border-slate-200 dark:border-slate-700">
+      <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Cost Estimate Calculator</h3>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Document Type</label>
+          <select id="docType" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white">
+            <option value="25">Birth Certificate (Standard)</option>
+            <option value="35">Marriage Certificate (Standard)</option>
+            <option value="30">Divorce Decree (Standard)</option>
+            <option value="25">Death Certificate (Standard)</option>
+            <option value="50">Academic Transcript (per page)</option>
+            <option value="45">Diploma/Degree Certificate</option>
+            <option value="40">Police Clearance Certificate</option>
+            <option value="60">Legal Contract/Agreement</option>
+            <option value="35">Bank Statement (per page)</option>
+            <option value="55">Court Order/Judgment</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Number of Pages</label>
+          <input type="number" id="pageCount" value="1" min="1" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Service Speed</label>
+          <select id="serviceSpeed" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white">
+            <option value="1">Standard (2-3 business days)</option>
+            <option value="1.5">Expedited (24-48 hours)</option>
+            <option value="2">Rush (Same day)</option>
+          </select>
+        </div>
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-600">
+          <p class="text-lg font-bold text-slate-900 dark:text-white">Estimated Cost: $<span id="estimatedCost">25</span></p>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">This is an estimate. Actual costs may vary by provider.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Common languages such as Spanish, French, Chinese, and Arabic typically fall within standard pricing tiers. Less common languages may command premium pricing due to limited translator availability. Complex documents with specialized terminology (medical records, technical patents) may also incur additional charges. <a href="/immigration-document-translation/challenges/">Complex document considerations</a> may affect pricing for challenging source materials.
+    </p>
+  </ContentSection>
+
+  <ContentSection title="Turnaround Time Planner" level="h2">
+    <p>
+      Planning adequate time for translation is essential for meeting immigration application deadlines. This turnaround time planner helps you estimate when to initiate translation services to meet your target submission dates. Build in buffer time for potential revisions or additional document requests.
+    </p>
+    
+    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg my-6 border border-slate-200 dark:border-slate-700">
+      <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Turnaround Time Guide</h3>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-slate-300 dark:border-slate-600">
+            <th class="text-left py-2 text-slate-700 dark:text-slate-300">Document Type</th>
+            <th class="text-left py-2 text-slate-700 dark:text-slate-300">Standard</th>
+            <th class="text-left py-2 text-slate-700 dark:text-slate-300">Expedited</th>
+            <th class="text-left py-2 text-slate-700 dark:text-slate-300">Rush</th>
+          </tr>
+        </thead>
+        <tbody class="text-slate-600 dark:text-slate-400">
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Birth/Marriage Certificate</td>
+            <td class="py-2">1-2 days</td>
+            <td class="py-2">24 hours</td>
+            <td class="py-2">Same day</td>
+          </tr>
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Academic Transcript (1-2 pages)</td>
+            <td class="py-2">2-3 days</td>
+            <td class="py-2">1-2 days</td>
+            <td class="py-2">24 hours</td>
+          </tr>
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Police Clearance</td>
+            <td class="py-2">2-3 days</td>
+            <td class="py-2">1-2 days</td>
+            <td class="py-2">24 hours</td>
+          </tr>
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Legal Documents</td>
+            <td class="py-2">3-5 days</td>
+            <td class="py-2">2-3 days</td>
+            <td class="py-2">1-2 days</td>
+          </tr>
+          <tr>
+            <td class="py-2">Large Document Sets (10+ pages)</td>
+            <td class="py-2">5-7 days</td>
+            <td class="py-2">3-5 days</td>
+            <td class="py-2">2-3 days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      When planning your application timeline, consider not only translation turnaround but also the time required to obtain original documents, complete any necessary authentications or apostilles, and review translations for accuracy. <a href="/immigration-document-translation/trends/">Current trends</a> in digital submission may reduce mailing times, but document preparation remains a time-intensive process.
+    </p>
+  </ContentSection>
+
+  <ContentSection title="Document Type Identifier" level="h2">
+    <p>
+      Different immigration application types require different supporting documents. This guide helps identify which documents typically require certified translation for common immigration processes. Always consult the specific form instructions for your application type, as requirements may vary by case type and individual circumstances.
+    </p>
+
+    <h3>Family-Based Immigration (Form I-130)</h3>
+    <ul class="list-disc list-inside mb-4 text-slate-600 dark:text-slate-400">
+      <li>Birth certificates for beneficiary and petitioner</li>
+      <li>Marriage certificates (if applicable)</li>
+      <li>Divorce decrees (if applicable)</li>
+      <li>Death certificates for prior spouses (if applicable)</li>
+      <li>Adoption decrees (if applicable)</li>
+      <li>Evidence of name changes (if applicable)</li>
+    </ul>
+
+    <h3>Adjustment of Status (Form I-485)</h3>
+    <ul class="list-disc list-inside mb-4 text-slate-600 dark:text-slate-400">
+      <li>All civil documents listed above</li>
+      <li>Police clearance certificates from all countries of residence</li>
+      <li>Military records (if applicable)</li>
+      <li>Court records for any criminal proceedings</li>
+    </ul>
+
+    <h3>Employment-Based Immigration</h3>
+    <ul class="list-disc list-inside mb-4 text-slate-600 dark:text-slate-400">
+      <li>Academic transcripts and diplomas</li>
+      <li>Professional licenses or certifications</li>
+      <li>Employment verification letters</li>
+      <li>Publication records or research documentation</li>
+    </ul>
+
+    <h3>Naturalization (Form N-400)</h3>
+    <ul class="list-disc list-inside mb-4 text-slate-600 dark:text-slate-400">
+      <li>Marriage certificates (if claiming marriage-based eligibility)</li>
+      <li>Divorce decrees (if applicable)</li>
+      <li>Documents related to selective service registration</li>
+    </ul>
+
+    <p>
+      <a href="/immigration-document-translation/ontology/">Our glossary</a> provides detailed definitions of document types and their purposes in immigration applications.
+    </p>
+  </ContentSection>
+
+  <ContentSection title="Word Count Guide" level="h2">
+    <p>
+      Translation pricing is often based on word count or page count. This guide helps estimate word counts for common document types to anticipate translation costs. Note that word count methods vary by provider—some charge by source word count, others by target word count, and others by page.
+    </p>
+
+    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg my-6 border border-slate-200 dark:border-slate-700">
+      <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Typical Word Counts by Document</h3>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-slate-300 dark:border-slate-600">
+            <th class="text-left py-2 text-slate-700 dark:text-slate-300">Document Type</th>
+            <th class="text-left py-2 text-slate-700 dark:text-slate-300">Typical Words</th>
+            <th class="text-left py-2 text-slate-700 dark:text-slate-300">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="text-slate-600 dark:text-slate-400">
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Birth Certificate</td>
+            <td class="py-2">100-300</td>
+            <td class="py-2">Varies by country format</td>
+          </tr>
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Marriage Certificate</td>
+            <td class="py-2">150-400</td>
+            <td class="py-2">Complex for religious ceremonies</td>
+          </tr>
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Academic Transcript (per page)</td>
+            <td class="py-2">200-500</td>
+            <td class="py-2">Dense formatting, many abbreviations</td>
+          </tr>
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Police Clearance</td>
+            <td class="py-2">150-500</td>
+            <td class="py-2">Highly variable by country</td>
+          </tr>
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <td class="py-2">Diploma/Degree</td>
+            <td class="py-2">100-300</td>
+            <td class="py-2">Often includes seals and stamps</td>
+          </tr>
+          <tr>
+            <td class="py-2">Bank Statement (per page)</td>
+            <td class="py-2">50-200</td>
+            <td class="py-2">Many numbers, less text</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Dense legal documents with small print may contain significantly more words per page than standard formatted documents. When requesting quotes, providing both page counts and approximate word counts helps translation services provide accurate estimates.
+    </p>
+  </ContentSection>
+
+  <ContentSection title="Interactive Translation Checklist" level="h2">
+    <p>
+      Use this checklist to ensure your translation submission is complete and compliant with USCIS requirements. Check off each item as you prepare your documentation package.
+    </p>
+
+    <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg my-6 border border-slate-200 dark:border-slate-700">
+      <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Pre-Submission Checklist</h3>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">Source documents are clear and legible</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">All pages of multi-page documents are included</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">Translation includes all stamps, seals, and signatures</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">Certification statement is present and signed</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">Translator contact information is included</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">Names are transliterated consistently across all documents</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">Dates are formatted consistently</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">Reviewed translation against source for obvious errors</span>
+        </label>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded">
+          <span class="text-slate-700 dark:text-slate-300">Both source and translation will be submitted together</span>
+        </label>
+      </div>
+    </div>
+  </ContentSection>
+
+  <ContentSection title="External Resources and Directories" level="h2">
+    <p>
+      The following external resources provide additional information and assistance for immigration document translation needs:
+    </p>
+
+    <h3>USCIS Resources</h3>
+    <ul class="list-disc list-inside mb-4 text-slate-600 dark:text-slate-400">
+      <li><a href="https://www.uscis.gov/forms" class="text-blue-600 hover:underline">USCIS Forms Page</a> - Download official forms and instructions</li>
+      <li><a href="https://www.uscis.gov/forms/explore-my-options"" class="text-blue-600 hover:underline">Case Processing Times</a> - Check current processing times</li>
+      <li><a href="https://www.uscis.gov/tools/glossary" class="text-blue-600 hover:underline">USCIS Glossary</a> - Definitions of immigration terms</li>
+    </ul>
+
+    <h3>Professional Organizations</h3>
+    <ul class="list-disc list-inside mb-4 text-slate-600 dark:text-slate-400">
+      <li><a href="https://www.atanet.org/" class="text-blue-600 hover:underline">American Translators Association</a> - Professional translator directory</li>
+      <li><a href="https://www.ncihc.org/" class="text-blue-600 hover:underline">National Council on Interpreting in Health Care</a> - Healthcare translation resources</li>
+      <li><a href="https://rid.org/" class="text-blue-600 hover:underline">Registry of Interpreters for the Deaf</a> - Sign language services</li>
+    </ul>
+
+    <h3>Maryland-Specific Resources</h3>
+    <ul class="list-disc list-inside mb-4 text-slate-600 dark:text-slate-400">
+      <li><a href="https://sos.maryland.gov/" class="text-blue-600 hover:underline">Maryland Secretary of State - Notary Services</a></li>
+      <li><a href="https://www.mdcourts.gov"" class="text-blue-600 hover:underline">Maryland Judiciary - Court Interpreter Services</a></li>
+      <li><a href="https://www.uscis.gov/about-us/find-uscis-office" class="text-blue-600 hover:underline">USCIS Baltimore Field Office</a></li>
+    </ul>
+  </ContentSection>
+
+  <ContentSection title="Conclusion" level="h2">
+    <p>
+      These tools and resources support informed decision-making throughout the immigration document translation process. From initial cost estimation through final submission, having access to reliable information helps ensure that translations meet requirements and applications proceed smoothly.
+    </p>
+    <p>
+      <a href="/immigration-document-translation/challenges/">Understanding common challenges</a> and using these planning tools can help avoid delays and complications in the immigration process. For specific questions about your individual case, consider consulting with an immigration attorney or accredited representative who can provide personalized guidance.
+    </p>
+  </ContentSection>
+
+  <script is:inline>
+    // Cost Calculator
+    function calculateCost() {
+      const docType = parseInt(document.getElementById('docType')?.value || 25);
+      const pageCount = parseInt(document.getElementById('pageCount')?.value || 1);
+      const serviceSpeed = parseFloat(document.getElementById('serviceSpeed')?.value || 1);
+      
+      const total = docType * pageCount * serviceSpeed;
+      const costElement = document.getElementById('estimatedCost');
+      if (costElement) {
+        costElement.textContent = Math.round(total);
+      }
+    }
+
+    document.getElementById('docType')?.addEventListener('change', calculateCost);
+    document.getElementById('pageCount')?.addEventListener('input', calculateCost);
+    document.getElementById('serviceSpeed')?.addEventListener('change', calculateCost);
+  </script>
+</TopicLayout>

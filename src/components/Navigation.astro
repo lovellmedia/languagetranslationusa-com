@@ -1,0 +1,59 @@
+---
+interface Props {
+  currentTopic: string;
+  currentPillar?: string;
+}
+
+const { currentTopic, currentPillar } = Astro.props;
+
+const pillars = [
+  { name: 'Overview', slug: '' },
+  { name: 'History & Evolution', slug: 'history' },
+  { name: 'Technical Deep-Dive', slug: 'technical-deep-dive' },
+  { name: 'Ontology', slug: 'ontology' },
+  { name: 'Current Trends', slug: 'trends' },
+  { name: 'Tools & Resources', slug: 'tools' },
+  { name: 'Common Challenges', slug: 'challenges' },
+];
+
+const basePath = `/${currentTopic}/`;
+---
+
+<nav class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Breadcrumb -->
+    <div class="py-3 text-sm text-slate-500 dark:text-slate-400">
+      <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="capitalize text-slate-700 dark:text-slate-300">{currentTopic.replace(/-/g, ' ')}</span>
+      {currentPillar && currentPillar !== '' && (
+        <>
+          <span class="mx-2">/</span>
+          <span class="text-slate-900 dark:text-slate-100">{pillars.find(p => p.slug === currentPillar)?.name || currentPillar}</span>
+        </>
+      )}
+    </div>
+    
+    <!-- Pillar Navigation -->
+    <div class="py-2 border-t border-slate-200 dark:border-slate-700">
+      <div class="flex flex-wrap gap-2">
+        {pillars.map((pillar) => {
+          const href = pillar.slug === '' ? basePath : `${basePath}${pillar.slug}/`;
+          const isActive = (currentPillar === pillar.slug) || (currentPillar === undefined && pillar.slug === '');
+          return (
+            <a
+              href={href}
+              class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                isActive
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-600'
+              }`}
+            >
+              {pillar.name}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</nav>

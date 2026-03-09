@@ -1,0 +1,49 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  topic: string;
+  pillar?: string;
+  keyPoints?: string[];
+  relatedLinks?: { name: string; href: string }[];
+  showTools?: boolean;
+}
+
+const { 
+  title, 
+  description, 
+  topic, 
+  pillar = '', 
+  keyPoints = [], 
+  relatedLinks = [],
+  showTools = false 
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Navigation currentTopic={topic} currentPillar={pillar} />
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Main Content -->
+      <main class="lg:col-span-8">
+        <article class="prose dark:prose-invert prose-slate max-w-none">
+          <slot />
+        </article>
+      </main>
+      
+      <!-- Sidebar -->
+      <div class="lg:col-span-4">
+        <Sidebar 
+          keyPoints={keyPoints} 
+          relatedLinks={relatedLinks}
+          showTools={showTools}
+        />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
