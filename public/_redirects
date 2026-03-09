@@ -1,0 +1,5 @@
+# Netlify redirects file
+# Redirect all traffic to the main domain
+
+# Custom 404 page
+/* /404.html 404
